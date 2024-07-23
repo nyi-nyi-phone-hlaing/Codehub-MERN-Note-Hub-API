@@ -1,17 +1,17 @@
-//! Packages
+//* Packages
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-//! Locals
+//* Locals
 const noteRoutes = require("./routes/note");
 
-//! Initializing
+//* Initializing
 const app = express();
 
-//! Middlewares
+//* Middlewares
 app.use(
   cors({
     origin: "*",
@@ -20,7 +20,7 @@ app.use(
 );
 app.use(bodyParser.json());
 
-//! Defined Routes
+//* Defined Routes
 app.use(noteRoutes);
 
 const PORT = process.env.PORT || 8081;

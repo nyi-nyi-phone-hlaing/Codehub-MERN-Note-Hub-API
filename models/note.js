@@ -1,5 +1,7 @@
+//* Packages
 const { model, Schema } = require("mongoose");
 
+//* Creating Note Schema
 const noteSchema = new Schema(
   {
     title: {
@@ -12,6 +14,10 @@ const noteSchema = new Schema(
       type: String,
       minLength: 5,
       required: true,
+    },
+    author: {
+      type: String,
+      default: "Anonymous",
     },
   },
   { timestamps: true }
