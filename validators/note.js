@@ -7,7 +7,7 @@ exports.noteTitleValidation = (title) => {
     .withMessage("Title is required.")
     .isLength({ min: 10 })
     .withMessage("Title is too short.")
-    .isLength({ max: 50 })
+    .isLength({ max: 100 })
     .withMessage("Title is too long.");
 };
 
